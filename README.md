@@ -1,24 +1,9 @@
-# README
+# School Agenda
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Build for CIT336 WebScripting with rails and bootstrap.
 
-Things you may want to cover:
+User is able to CRUD "assignments" and has a simple http authenticator where user has to log in to be able to create, edit, and delete.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+For testing:
+Username: admin
+Password: admin
