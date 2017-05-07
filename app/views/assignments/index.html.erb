@@ -1,0 +1,8 @@
+<center><h1>Assignments</h1></center>
+<% @assignments.each do |assignment| %>
+	<div class="well">
+		<h3><%= assignment.title %></h3>
+		<p><%= assignment.due_date %></p>
+		<%= link_to "More Details", assignment_path(assignment), :class => 'btn btn-default' %>
+	</div>
+<%end%>

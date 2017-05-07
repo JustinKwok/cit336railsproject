@@ -1,0 +1,13 @@
+<h2><%= @assignment.title=%></h2>
+<p><%= @assignment.due_date=%></p>
+<p><%= @assignment.class_name=%></p>
+<p><%= @assignment.description=%></p>
+<hr>
+<%= link_to "Edit", edit_assignment_path(@assignment), :class => ('btn btn-default') %>
+
+<!--When user hits delete, ask are you sure?-->
+<%= link_to "Delete", assignment_path(@assignment),
+	method: :delete,
+	data: {confirm: 'Are you sure you would like to delete this assignment?'},
+ 	
+ 	:class => ('btn btn-danger') %>

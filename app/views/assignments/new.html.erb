@@ -1,0 +1,38 @@
+<center><h1>Add New Assignment</h1></center>
+
+<!--Form asking for title, duedate, classname, and description-->
+
+<%= form_for :assignment, url: assignments_path do |f| %>
+
+  <% if @assignment.errors.any? %>
+    <% @assignment.errors.full_messages.each do |msg| %>
+      <div class ="alert alert-danger"><%= msg %></div>
+      <% end %>
+    <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field(:title, {:class => 'form-control'}) %>
+  </p>
+ 
+  <p>
+    <%= f.label :due_date %><br>
+    <%= f.text_area(:due_date, {:class => 'form-control'}) %>
+  </p>
+
+   <p>
+    <%= f.label :class_name %><br>
+    <%= f.text_field(:class_name, {:class => 'form-control'}) %>
+  </p>
+
+   <p>
+    <%= f.label :description %><br>
+    <%= f.text_field(:description, {:class => 'form-control'}) %>
+  </p>
+ 
+ <br>
+
+  <center><p>
+    <%= f.submit({:class => 'btn btn-primary'}) %>
+  </p></center>
+<% end %>
